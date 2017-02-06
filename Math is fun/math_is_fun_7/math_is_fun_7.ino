@@ -11,14 +11,13 @@
 
 //***************************** VARIABLES ********************************
 
+int test = 32767;
 
 //***************************** SETUP ************************************
 
-int test = 32767;
-
 void setup()              // Només una vegada
 {
-  Serial.begin(9600);     //posar el serial library a 9600 bps
+  Serial.begin(9600);     // Posar el Serial Library a 9600
   Serial.print("Test value is: ");
   Serial.println(test);
 
@@ -29,7 +28,7 @@ void setup()              // Només una vegada
 }
 
 //***************************** LOOP *************************************
-void loop()     // Ha d'estar buit
+void loop()     // es repeteix a l'infinit
 {
 }
 

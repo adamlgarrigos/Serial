@@ -11,11 +11,11 @@
 
 //***************************** VARIABLES ********************************
 
+int drive_gb = 5;
+int drive_mb;
 
 //***************************** SETUP ************************************
 
-int drive_gb = 5;
-int drive_mb;
 void setup()             // Només una vegada
 {
   Serial.begin(9600);     // Posar el Serial Library a 9600
@@ -31,7 +31,8 @@ void setup()             // Només una vegada
 }
 
 //***************************** LOOP *************************************
-void loop() {
+void loop()// es repeteix a l'infinit
+{
   
 
 }

@@ -11,12 +11,12 @@
 
 //***************************** VARIABLES ********************************
 
-
-//***************************** SETUP ************************************
-
 int a = 3; // valor es igual a 3
 int b = 4; // valor es igual a 4
 int h = sqrt(a*a + b*b); // valor es igual a la hipotenusa
+
+//***************************** SETUP ************************************
+
 void setup()              // funciona una vegada
 {
   Serial.begin(9600);     // posar a 9600
@@ -33,7 +33,8 @@ void setup()              // funciona una vegada
 
 
 //***************************** LOOP *************************************
-void loop() {
+void loop()// es repeteix a l'infinit
+{
   
 
 }

@@ -11,12 +11,11 @@
 
 //***************************** VARIABLES ********************************
 
-
-//***************************** SETUP ************************************
-
 int a = 5; // valor es igual a 5
 int b = 10; // valor es igual a 10
 int c = 20; // valor es igual a 20
+
+//***************************** SETUP ************************************
 
 void setup()              // funciona una vegada
 {
@@ -49,7 +48,7 @@ void setup()              // funciona una vegada
 
 
 //***************************** LOOP *************************************
-void loop() {
+void loop() { // es repeteix a l'infinit
   
 
 }
