@@ -33,6 +33,9 @@ void loop() {
     Serial.print(" RParalel = ");
     Serial.print(rParalel);
     Serial.println(" ohms");
+    Serial.println("");
+    Serial.println("Entra nous valors per r1 i r2");
+    Serial.println("");
     }
   }
 }
