@@ -11,7 +11,7 @@
 
 //***************************** VARIABLES ********************************
 
-int comptar = 13;
+int comptar = 11;
 
 //***************************** SETUP ************************************
 
@@ -25,7 +25,7 @@ void setup()                    // run once, when the sketch starts
     Serial.print(i);
     Serial.print("-");
   } 
-  Serial.print(comptar);
+    Serial.print(comptar);
 }
 
 //***************************** LOOP *************************************
