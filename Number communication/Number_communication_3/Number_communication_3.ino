@@ -9,43 +9,53 @@
 //***************************** INCLUDE **********************************
 
 //***************************** VARIABLES ********************************
-float r1, r2;             // variables for the R's
-float rSerie, rParalel;// variables for the results
+int n;             // variables for the R's
+int r;// variables for the results
 
 //***************************** SETUP ************************************
 void setup() { 
   Serial.begin(9600);        // initialize serial
-  Serial.println("Entra el valor de r1 i r2 (separats per una coma)");
+  Serial.println("Entra un numero?");
   
 }
 //***************************** LOOP *************************************
 void loop() {
+  
   while (Serial.available() > 0) {  // if there's any serial available, read it
-    r1 = Serial.parseInt();// look for valid int the incoming serial stream
-
-    r2 = Serial.parseInt();
+    n = Serial.parseInt();// look for valid int the incoming serial stream
 
     if (Serial.read() == '\n') { //look for newline. Is the end of your sentence
-    Serial.print("r1 = ");
-    Serial.print(r1);
-    Serial.print(" ohms");
-    Serial.print(" r2 = ");
-    Serial.print(r2);
-    Serial.println(" ohms");
-   
-    rSerie = r1 + r2;
+    r = n / 10;
 
-    Serial.print("RSerie = ");
-    Serial.print(rSerie);
-    Serial.print(" ohms");
-    
-    rParalel = r1*r2 / (r1+r2);
-    
-    Serial.print(" RParalel = ");
-    Serial.print(rParalel);
-    Serial.println(" ohms");
+    Serial.print("El numero ");
+    Serial.print(n);
+    if (r >= 10 & r <100)
+    {
+    Serial.println(" te 3 xifres");
     Serial.println("");
-    Serial.println("Entra nous valors per r1 i r2");
+    }
+    else if ( r >= 1 & r <10) 
+    {
+    Serial.println(" te 2 xifres");
+    Serial.println("");
+    }
+    else if ( r >= 0,1 & r <1)
+    {
+    Serial.println(" te 1 xifres");
+    Serial.println(""); 
+    }
+    else if ( r >= 100 & r <1000)
+    {
+    Serial.println(" te 4 xifres");
+    Serial.println(""); 
+    }
+    else if ( r >= 1000 & r <10000)
+    {
+    Serial.println(" te 5 xifres");
+    Serial.println(""); 
+    }
+    
+    Serial.println("Entra un numero?");
     Serial.println("");
     }
   }
