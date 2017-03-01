@@ -11,7 +11,7 @@
 
 //***************************** VARIABLES ********************************
 
-int thisByte = 33; 
+int thisByte = 0; 
 
 
 //***************************** SETUP ************************************
@@ -35,7 +35,7 @@ void loop()
   Serial.print(", bin: "); 
   Serial.println(thisByte, BIN);   
 
-  if(thisByte == 126)  // if printed last visible character '~'
+  if(thisByte == 145)  // if printed last visible character '~'
   { 
     while(true)
     { 
