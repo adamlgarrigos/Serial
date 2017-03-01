@@ -9,67 +9,48 @@
 //***************************** INCLUDE **********************************
 
 //***************************** VARIABLES ********************************
-int hores;// variables for the R's
-int r;// variables for the results
-int h;
-float z;
-
+int a, t;// variables for the R's
+long s;
+double m;
 //***************************** SETUP ************************************
 void setup() { 
   Serial.begin(9600);        // initialize serial
-  Serial.println("Quantes hores de treball?");
+  Serial.print("Entra numeros un per un (per acabar 0): ");
   
 }
 //***************************** LOOP *************************************
 void loop() {
-  
+  a= 1;
+  t = 0;
+  do{
   while (Serial.available() > 0) {  // if there's any serial available, read it
-    hores = Serial.parseInt();// look for valid int the incoming serial stream
-
+    a = Serial.parseInt();// look for valid int the incoming serial stream
+     Serial.print(a);
+     Serial.print(" - ");
     if (Serial.read() == '\n') { //look for newline. Is the end of your sentence
-    {
-
-    Serial.print("El salari de ");
-    Serial.print(hores);
-    Serial.print(" hores es de ");
-    
-    
-    if (hores <= 37)
-    
-    {
-      r = (hores * 20 * 95) / 100 ;
-      Serial.print(r);
-      Serial.println(" euros");
-      Serial.println ("");
-      Serial.println ("Quantes hores de treball?");
-    }      
-    else if (hores >37)
-    {
-      h = hores - 37;
-      r = (37 * 20) + (h *30);
-         
-    
-      if (r <= 800)
-      {
-         z = ((37*20) + (h*30))*(float) 95/100;
-         Serial.print (z);
-         Serial.println(" euros");
-         Serial.println ("");
-      }
-      else
-      {
-        z = ((37*20) + (h*30))*(float) 90/100;
-        Serial.print (z);
-        Serial.println(" euros");
-        Serial.println ("");
-        
-      }
-    Serial.println ("Quantes hores de treball?");
-    }
-    }
+      s = s + a;
+      t++;
     }
   }
-} 
+  }
+    while (a!=0);
+    t--;
+    m = (float)s/t;
+    Serial.println(""); 
+    Serial.print("S'han entrat ");
+    Serial.print(t);
+    Serial.print(" numeros, la suma de tots ells es ");
+    Serial.print(s);
+    Serial.print(" i la mitja ");
+    Serial.print(m);
+    Serial.println(".");
+    Serial.println("");
+    Serial.print("Entrar numeros un a un (per acabar 0): ");
+}
+   
+    
 
+    
+ 
   
 //***************************** FUNCIONS *********************************
